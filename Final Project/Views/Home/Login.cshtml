@@ -1,11 +1,13 @@
 ﻿@page "/login"
 @model Final_Project.Views.Home.LoginModel
 
+
+
 <h2>Title</h2>
 
-@if (!string.IsNullOrEmpty(Message))
+@if (!string.IsNullOrEmpty(ViewData["Message"] as string))
 {
-    <p class="text-danger">@Message</p>
+    <p class="text-danger">@ViewData["Message"]</p>
 }
 
 <EditForm Model="this" OnValidSubmit="HandleLogin">
@@ -28,23 +30,3 @@
 <p class="mt-3">
     Don't have an account? <a href="/signup">Signup</a>
 </p>
-
-@code{
-    public string Message {get; set;}
-	public string Email {get; set;}
-
-    private void HandleLogin()
-    {
-        if(strong.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
-
-        {
-			Message = "Email and password are required.";
-        }
-        else
-        {
-			Message = "Login successful.";
-        }
-
-    }
-
-}

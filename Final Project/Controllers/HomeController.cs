@@ -26,8 +26,7 @@ namespace Final_Project.Controllers
 
         public IActionResult Login()
         {
-            var model = new LoginModel();
-            return View(model);
+            return View(new LoginModel());
         }
 
         public IActionResult Signup()
