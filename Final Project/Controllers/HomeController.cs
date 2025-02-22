@@ -24,6 +24,11 @@ namespace Final_Project.Controllers
             return View();
         }
 
+        public IActionResult Forms()
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View(new LoginModel());
@@ -34,6 +39,10 @@ namespace Final_Project.Controllers
             return View();
         }
 
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
